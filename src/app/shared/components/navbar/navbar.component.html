@@ -1,0 +1,89 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+
+  <div class="navbar-container">
+
+    <!-- LOGO -->
+
+    <div class="logo-wrapper">
+
+      <img src="assets/images/cross.png" alt="Holy Cross" class="logo" />
+
+      <div class="brand-content">
+
+        <h2>Divine Catholic</h2>
+
+        <span>
+          Faith • Grace • Salvation
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- DESKTOP MENU -->
+
+    <nav class="desktop-menu">
+
+      <a routerLink="/home">Home</a>
+
+      <a routerLink="/infantjesus">
+        Infant Jesus
+      </a>
+
+      <a routerLink="/blessings">
+        Blessings 
+      </a>
+
+      <a routerLink="/passion">
+        Passion of Christ
+      </a>
+
+      <a routerLink="/prayer">
+        Prayer
+      </a>
+
+      <a routerLink="/saint">
+        Saints
+      </a>
+
+      <a routerLink="/apostles">
+        12 Apostles
+      </a>
+
+    </nav>
+
+    <!-- MOBILE TOGGLE -->
+
+    <button class="mobile-toggle" (click)="toggleMenu()">
+
+      ☰
+
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+
+    <a href="#home">Home</a>
+
+    <a href="#holy-family">
+      Holy Family
+    </a>
+
+    <a href="#joseph">
+      Joseph
+    </a>
+
+    <a href="#mary">
+      Mary
+    </a>
+
+    <a href="#prayer">
+      Prayer
+    </a>
+
+  </div>
+
+</header>
