@@ -1,0 +1,159 @@
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="details-hero">
+
+    <div class="overlay"></div>
+
+    <div class="details-container">
+
+        <!-- IMAGE -->
+
+        <div class="details-image">
+
+            <img [src]="apostle.image" [alt]="apostle.name" />
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="details-content">
+
+            <span>
+                Apostle Of Christ
+            </span>
+
+            <h1>
+                {{ apostle.name }}
+            </h1>
+
+            <p>
+                {{ apostle.work }}
+            </p>
+
+            <div class="details-meta">
+
+                <div>
+                    Born:
+                    {{ apostle.dob }}
+                </div>
+
+                <div>
+                    Died:
+                    {{ apostle.dod }}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     STORY SECTION
+========================================= -->
+
+<section class="story-section">
+
+    <!-- CHILDHOOD -->
+
+    <div class="story-card">
+
+        <h2>
+            Childhood And Early Life
+        </h2>
+
+        <p>
+            {{ apostle.childhood }}
+        </p>
+
+    </div>
+
+    <!-- MEETING JESUS -->
+
+    <div class="story-card">
+
+        <h2>
+            Meeting Jesus Christ
+        </h2>
+
+        <p>
+            {{ apostle.meetingJesus }}
+        </p>
+
+    </div>
+
+    <!-- TRANSFORMATION -->
+
+    <div class="story-card">
+
+        <h2>
+            Transformation Through Christ
+        </h2>
+
+        <p>
+            {{ apostle.transformation }}
+        </p>
+
+    </div>
+
+    <!-- CRUCIFIXION -->
+
+    <div class="story-card">
+
+        <h2>
+            During The Crucifixion
+        </h2>
+
+        <p>
+            {{ apostle.crucifixion }}
+        </p>
+
+    </div>
+
+    <!-- RESURRECTION -->
+
+    <div class="story-card">
+
+        <h2>
+            After The Resurrection
+        </h2>
+
+        <p>
+            {{ apostle.afterResurrection }}
+        </p>
+
+    </div>
+
+    <!-- MISSION -->
+
+    <div class="story-card">
+
+        <h2>
+            Missionary Journey
+        </h2>
+
+        <p>
+            {{ apostle.mission }}
+        </p>
+
+    </div>
+
+    <!-- DEATH -->
+
+    <div class="story-card">
+
+        <h2>
+            Final Sacrifice
+        </h2>
+
+        <p>
+            {{ apostle.deathStory }}
+        </p>
+
+    </div>
+
+</section>

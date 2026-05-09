@@ -1,0 +1,250 @@
+:host {
+    display: block;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.apostles-hero {
+    position: relative;
+
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 140px 2rem 6rem;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(180deg,
+            #071020,
+            #0f1c2e,
+            #1b4965);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(255, 255, 255, 0.15),
+            transparent 60%);
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-content span {
+    color: #fff3b0;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin: 1rem 0;
+
+    font-size:
+        clamp(3rem, 6vw, 6rem);
+
+    font-family: "Cinzel", serif;
+}
+
+.hero-content p {
+    line-height: 2;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.apostles-section {
+    padding: 6rem 2rem;
+
+    background:
+        linear-gradient(180deg,
+            #071020,
+            #0d1b2a);
+}
+
+/* GRID */
+
+.apostles-grid {
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(340px, 1fr));
+
+    gap: 2rem;
+}
+
+/* CARD */
+
+.apostle-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(16px);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.apostle-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* IMAGE */
+
+.apostle-image-wrapper {
+    height: 400px;
+
+    overflow: hidden;
+}
+
+.apostle-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.apostle-card:hover img {
+    transform: scale(1.08);
+}
+
+/* CONTENT */
+
+.apostle-content {
+    padding: 2rem;
+}
+
+.apostle-content h2 {
+    margin-bottom: 1rem;
+
+    color: white;
+
+    font-size: 2rem;
+
+    font-family: "Cinzel", serif;
+}
+
+/* META */
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.meta span {
+    padding:
+        0.5rem 1rem;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #fff3b0;
+
+    font-size: 0.8rem;
+}
+
+/* TEXT */
+
+.apostle-content p {
+    color:
+        rgba(255, 255, 255, 0.84);
+
+    line-height: 1.8;
+}
+
+.death {
+    margin:
+        1.5rem 0;
+
+    color: #ffb3b3;
+
+    font-style: italic;
+}
+
+/* BUTTON */
+
+.apostle-content button {
+    width: 100%;
+
+    padding: 1rem;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(135deg,
+            #d4af37,
+            #fff3b0);
+
+    color: #071020;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .apostles-section {
+        padding:
+            4rem 1rem;
+    }
+
+    .apostle-image-wrapper {
+        height: 320px;
+    }
+}

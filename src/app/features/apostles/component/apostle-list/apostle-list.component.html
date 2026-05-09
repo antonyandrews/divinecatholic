@@ -1,0 +1,90 @@
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="apostles-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span>
+            Disciples Of Christ
+        </span>
+
+        <h1>
+            The Twelve Apostles
+        </h1>
+
+        <p>
+            The chosen followers of Jesus Christ
+            who spread His teachings across nations,
+            sacrificed their lives for faith,
+            and transformed the history of humanity.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     APOSTLES GRID
+========================================= -->
+
+<section class="apostles-section">
+
+    <div class="apostles-grid">
+
+        <!-- CARD -->
+
+        <div class="apostle-card" *ngFor="let apostle of apostles" [routerLink]="['/apostles', apostle.id]">
+
+            <!-- IMAGE -->
+
+            <div class="apostle-image-wrapper">
+
+                <img [src]="apostle.image" [alt]="apostle.name" />
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="apostle-content">
+
+                <h2>
+                    {{ apostle.name }}
+                </h2>
+
+                <div class="meta">
+
+                    <span>
+                        Born: {{ apostle.dob }}
+                    </span>
+
+                    <span>
+                        Died: {{ apostle.dod }}
+                    </span>
+
+                </div>
+
+                <p>
+                    {{ apostle.work }}
+                </p>
+
+                <div class="death">
+
+                    {{ apostle.death }}
+
+                </div>
+
+                <button>
+                    View Divine Journey
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
