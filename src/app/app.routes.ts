@@ -42,5 +42,18 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./features/apostles/component/view-apostle/view-apostle.component')
                 .then(m => m.ViewApostleComponent)
+    },
+    {
+        path: 'prayers',
+        loadComponent: () =>
+            import('./features/prayers/component/prayers-home/prayers-home.component')
+                .then(m => m.PrayersHomeComponent)
+    },
+
+    {
+        path: 'prayers/:id',
+        loadComponent: () =>
+            import('./features/prayers/component/prayer-details/prayer-details.component')
+                .then(m => m.PrayerDetailsComponent)
     }
 ];

@@ -131,7 +131,7 @@ export const APOSTLES = [
       'Executed by sword in Jerusalem.',
 
     image:
-      'assets/apostles/james-major.jpg',
+      'assets/images/apostles/st-james.jpg',
 
     childhood:
       `
@@ -186,7 +186,7 @@ export const APOSTLES = [
       'Natural death after exile.',
 
     image:
-      'assets/apostles/john.jpg',
+      'assets/images/apostles/st-john.jpg',
 
     childhood:
       `
@@ -240,7 +240,7 @@ export const APOSTLES = [
       'Martyred by crucifixion.',
 
     image:
-      'assets/apostles/philip.jpg',
+      'assets/images/apostles/st-philip.jpg',
 
     childhood:
       `
@@ -294,7 +294,7 @@ export const APOSTLES = [
       'Flayed alive and beheaded.',
 
     image:
-      'assets/apostles/bartholomew.jpg',
+      'assets/images/apostles/st-barthalomew.jpg',
 
     childhood:
       `
@@ -348,7 +348,7 @@ export const APOSTLES = [
       'Killed while preaching.',
 
     image:
-      'assets/apostles/matthew.jpg',
+      'assets/images/apostles/st-mathew.jpg',
 
     childhood:
       `
@@ -402,7 +402,7 @@ export const APOSTLES = [
       'Speared to death in India.',
 
     image:
-      'assets/apostles/thomas.jpg',
+      'assets/images/apostles/st-thomas.webp',
 
     childhood:
       `
@@ -456,7 +456,7 @@ export const APOSTLES = [
       'Thrown from temple and beaten.',
 
     image:
-      'assets/apostles/james-minor.jpg',
+      'assets/images/apostles/st-james-less.webp',
 
     childhood:
       `
@@ -510,7 +510,7 @@ export const APOSTLES = [
       'Clubbed to death.',
 
     image:
-      'assets/apostles/thaddeus.jpg',
+      'assets/images/apostles/st-jude.jpg',
 
     childhood:
       `
@@ -564,7 +564,7 @@ export const APOSTLES = [
       'Martyred by sawing.',
 
     image:
-      'assets/apostles/simon.jpg',
+      'assets/images/apostles/st-simon.jpg',
 
     childhood:
       `
@@ -618,7 +618,7 @@ export const APOSTLES = [
       'Died after betraying Jesus.',
 
     image:
-      'assets/apostles/judas.jpg',
+      'assets/images/apostles/judas.jpg',
 
     childhood:
       `

@@ -1,0 +1,340 @@
+:host {
+  display: block;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050816,
+      #09111f,
+      #0f1f35
+    );
+
+  overflow: hidden;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.prayer-details-hero {
+  position: relative;
+
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding:
+    140px 2rem 5rem;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,215,0,0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #071020,
+      #102542,
+      #1b4965
+    );
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.01)
+    );
+
+  backdrop-filter: blur(2px);
+}
+
+/* DIVINE LIGHT */
+
+.prayer-details-hero::before,
+.prayer-details-hero::after {
+  content: '';
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,215,0,0.18),
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  animation:
+    floatParticles 10s infinite ease-in-out;
+}
+
+.prayer-details-hero::before {
+  top: 5%;
+  left: 10%;
+}
+
+.prayer-details-hero::after {
+  bottom: 10%;
+  right: 10%;
+}
+
+/* CONTENT */
+
+.details-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1000px;
+}
+
+.details-content span {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding:
+    0.6rem 1.4rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,215,0,0.2);
+
+  color: #ffe8a2;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+.details-content h1 {
+  margin-bottom: 2rem;
+
+  font-size:
+    clamp(3rem, 7vw, 6rem);
+
+  font-family: "Cinzel", serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff9d6,
+      #ffd95b,
+      #c89d2a
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.details-content p {
+  line-height: 2;
+
+  color:
+    rgba(255,255,255,0.84);
+
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+.prayer-body {
+  position: relative;
+
+  padding:
+    6rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+/* GLASSMORPHISM CARD */
+
+.prayer-card {
+  position: relative;
+
+  max-width: 1300px;
+
+  width: 100%;
+
+  margin: auto;
+
+  padding: 3rem;
+
+  border-radius: 36px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,215,0,0.15);
+
+  backdrop-filter: blur(20px);
+
+  overflow: hidden;
+
+  animation:
+    glowPulse 4s infinite;
+}
+
+/* GOLDEN EDGE */
+
+.prayer-card::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  padding: 1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,215,0,0.5),
+      transparent,
+      rgba(255,215,0,0.3)
+    );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  pointer-events: none;
+}
+
+/* TITLES */
+
+.prayer-card h2 {
+  margin-bottom: 2rem;
+
+  color: #ffe8a2;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  font-family: "Cinzel", serif;
+}
+
+/* PRAYER TEXT */
+
+.prayer-text {
+  white-space: pre-line;
+
+  font-size: 1.2rem;
+
+  line-height: 2.5;
+
+  text-align: center;
+
+  color: white;
+}
+
+/* EXPLANATION */
+
+.prayer-card p {
+  line-height: 2.2;
+
+  font-size: 1.1rem;
+
+  color:
+    rgba(255,255,255,0.84);
+}
+
+/* ROSARY EFFECT */
+
+.prayer-card::after {
+  content: '';
+
+  position: absolute;
+
+  top: -60px;
+  right: -60px;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  border:
+    2px dashed rgba(255,215,0,0.15);
+
+  animation:
+    rotateRosary 25s linear infinite;
+}
+
+@keyframes rotateRosary {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .prayer-details-hero {
+    padding:
+      120px 1rem 4rem;
+  }
+
+  .details-content h1 {
+    font-size: 3rem;
+  }
+
+  .details-content p {
+    font-size: 1rem;
+  }
+
+  .prayer-body {
+    padding:
+      4rem 1rem;
+  }
+
+  .prayer-card {
+    padding: 2rem;
+  }
+
+  .prayer-text {
+    font-size: 1rem;
+
+    line-height: 2.1;
+  }
+}

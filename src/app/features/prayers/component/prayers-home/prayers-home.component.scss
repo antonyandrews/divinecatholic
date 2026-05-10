@@ -1,0 +1,495 @@
+:host {
+  display: block;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050816,
+      #09111f,
+      #0f1f35
+    );
+
+  overflow: hidden;
+}
+
+/* =========================================
+   GLOBAL ANIMATIONS
+========================================= */
+
+@keyframes floatParticles {
+
+  0% {
+    transform:
+      translateY(0px)
+      translateX(0px);
+
+    opacity: 0.4;
+  }
+
+  50% {
+    transform:
+      translateY(-20px)
+      translateX(10px);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(0px)
+      translateX(0px);
+
+    opacity: 0.4;
+  }
+}
+
+@keyframes glowPulse {
+
+  0% {
+    box-shadow:
+      0 0 10px rgba(255,215,0,0.2),
+      0 0 20px rgba(255,215,0,0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 0 30px rgba(255,215,0,0.6),
+      0 0 60px rgba(255,215,0,0.3);
+  }
+
+  100% {
+    box-shadow:
+      0 0 10px rgba(255,215,0,0.2),
+      0 0 20px rgba(255,215,0,0.2);
+  }
+}
+
+@keyframes candleFlicker {
+
+  0% {
+    transform: scaleY(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scaleY(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 0.85;
+  }
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.prayers-hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    140px 2rem 6rem;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 215, 0, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #060b18,
+      #0b1730,
+      #13284b
+    );
+}
+
+/* HOLY LIGHT */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.01)
+    );
+
+  backdrop-filter: blur(2px);
+}
+
+/* FLOATING PARTICLES */
+
+.prayers-hero::before,
+.prayers-hero::after {
+  content: '';
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,215,0,0.22),
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  animation:
+    floatParticles 10s infinite ease-in-out;
+}
+
+.prayers-hero::before {
+  top: 10%;
+  left: 5%;
+}
+
+.prayers-hero::after {
+  bottom: 10%;
+  right: 5%;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1000px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.hero-content span {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding:
+    0.7rem 1.4rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,215,0,0.3);
+
+  color: #ffe9a8;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-content h1 {
+  margin-bottom: 2rem;
+
+  font-size:
+    clamp(3.5rem, 8vw, 7rem);
+
+  font-family: "Cinzel", serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff9d6,
+      #ffd95b,
+      #c89d2a
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+
+  line-height: 2;
+
+  color:
+    rgba(255,255,255,0.85);
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.prayers-section {
+  position: relative;
+
+  padding:
+    6rem 2rem;
+
+  overflow: hidden;
+}
+
+/* CHURCH WINDOW BACKDROP */
+
+.prayers-section::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,215,0,0.03),
+      rgba(255,215,0,0.03) 60px,
+      transparent 60px,
+      transparent 120px
+    );
+
+  pointer-events: none;
+}
+
+/* GRID */
+
+.prayers-grid {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1600px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.prayer-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,215,0,0.15);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  cursor: pointer;
+}
+
+/* GOLDEN GLOW */
+
+.prayer-card:hover {
+  transform:
+    translateY(-12px);
+
+  animation:
+    glowPulse 2s infinite;
+
+  border:
+    1px solid rgba(255,215,0,0.4);
+}
+
+/* IMAGE */
+
+.prayer-image {
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+}
+
+.prayer-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+.prayer-card:hover img {
+  transform: scale(1.08);
+}
+
+/* CANDLE LIGHT */
+
+.prayer-image::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: 20px;
+  right: 20px;
+
+  width: 18px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,210,70,0.9),
+      rgba(255,140,0,0.2)
+    );
+
+  filter: blur(1px);
+
+  animation:
+    candleFlicker 1.5s infinite ease-in-out;
+}
+
+/* CONTENT */
+
+.prayer-content {
+  padding: 2rem;
+}
+
+.prayer-content span {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding:
+    0.5rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,215,0,0.08);
+
+  color: #ffe28a;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 1px;
+}
+
+.prayer-content h2 {
+  margin-bottom: 1rem;
+
+  color: white;
+
+  font-size: 2rem;
+
+  font-family: "Cinzel", serif;
+}
+
+.prayer-content p {
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.82);
+}
+
+/* BUTTON */
+
+.prayer-content button {
+  margin-top: 2rem;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe08a,
+      #d4af37
+    );
+
+  color: #09111f;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.prayer-content button:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .prayer-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .prayers-hero {
+    padding:
+      120px 1rem 4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .prayers-section {
+    padding:
+      4rem 1rem;
+  }
+
+  .prayer-content {
+    padding: 1.5rem;
+  }
+}

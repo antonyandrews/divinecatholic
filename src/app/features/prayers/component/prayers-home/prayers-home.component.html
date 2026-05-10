@@ -1,0 +1,70 @@
+<section class="prayers-hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <span>
+      Sacred Catholic Devotions
+    </span>
+
+    <h1>
+      Catholic Prayers
+    </h1>
+
+    <p>
+      Explore sacred prayers,
+      rosaries,
+      saint intercessions,
+      healing prayers,
+      divine mercy devotions
+      and timeless Catholic traditions.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="prayers-section">
+
+  <div class="prayers-grid">
+
+    <div
+      class="prayer-card"
+      *ngFor="let prayer of prayers"
+      [routerLink]="['/prayers', prayer.id]">
+
+      <div class="prayer-image">
+
+        <img
+          [src]="prayer.image"
+          [alt]="prayer.title"
+        />
+
+      </div>
+
+      <div class="prayer-content">
+
+        <span>
+          {{ prayer.category }}
+        </span>
+
+        <h2>
+          {{ prayer.title }}
+        </h2>
+
+        <p>
+          {{ prayer.shortDescription }}
+        </p>
+
+        <button>
+          Read Prayer
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
